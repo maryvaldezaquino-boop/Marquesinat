@@ -1,0 +1,202 @@
+bo/* RESET y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Contenedor principal */
+.cover-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de portada */
+.cover-card {
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 2rem;
+    padding: 2rem 2rem 1.8rem;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    transition: transform 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cover-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Fila de información campus / materia */
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.info-block {
+    background: #f8fafc;
+    padding: 0.6rem 1.2rem;
+    border-radius: 60px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.label {
+    font-weight: 600;
+    color: #0f3b5c;
+    letter-spacing: -0.2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+}
+
+.value {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.95rem;
+}
+
+/* Imagen centrada */
+.image-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0 1.8rem;
+}
+
+.central-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 28px;
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+    border: 3px solid white;
+    transition: all 0.3s ease;
+}
+
+.central-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid de profesor y alumno */
+.details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 1.8rem 0 1.5rem;
+}
+
+.detail-item {
+    flex: 1;
+    min-width: 200px;
+    background: linear-gradient(145deg, #ffffff, #f1f5f9);
+    padding: 1rem 1.2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9eef3;
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3b7b9e;
+    margin-bottom: 0.4rem;
+}
+
+.detail-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0c4a6e;
+    word-break: break-word;
+}
+
+/* Línea decorativa */
+.decor-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #38bdf8, #2dd4bf);
+    margin: 0.8rem auto 1rem;
+    border-radius: 3px;
+}
+
+/* Wrapper de la marquesina para darle estilo */
+.marquee-wrapper {
+    margin: 1rem 0 0.5rem;
+    background: #0f172a;
+    border-radius: 60px;
+    padding: 0.5rem 0.2rem;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2), 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.custom-marquee {
+    font-family: 'Inter', monospace;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #facc15;
+    background: transparent;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* Pie de fecha dinámica */
+.footer-date {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: #5b6e8c;
+    font-weight: 400;
+    border-top: 1px solid #e2edf7;
+    padding-top: 1rem;
+    letter-spacing: 0.3px;
+}
+
+/* Responsive */
+@media (max-width: 550px) {
+    body {
+        padding: 1rem;
+    }
+    .cover-card {
+        padding: 1.5rem;
+    }
+    .info-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .info-block {
+        text-align: center;
+    }
+    .detail-name {
+        font-size: 0.9rem;
+    }
+    .custom-marquee {
+        font-size: 0.8rem;
+    }
+    .central-img {
+        max-width: 260px;
+    }
+}
+
+/* Asegurar que la marquesina se vea bien en navegadores modernos */
+marquee.custom-marquee {
+    white-space: nowrap;
+}
