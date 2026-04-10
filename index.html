@@ -1,0 +1,67 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Portada | Tecnologías de la Información II</title>
+    <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Preconexión para fuentes opcionales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuente elegante y moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Contenedor principal de la portada -->
+    <main class="cover-container">
+        <div class="cover-card">
+            <!-- Encabezado con datos institucionales -->
+            <div class="info-row">
+                <div class="info-block">
+                    <span class="label">Campus:</span>
+                    <span class="value">Texcoco</span>
+                </div>
+                <div class="info-block">
+                    <span class="label">Materia:</span>
+                    <span class="value">Tecnología de la Información II</span>
+                </div>
+            </div>
+            
+            <!-- Imagen central -->
+            <div class="image-center">
+                <img src="https://picsum.photos/id/26/280/200" alt="Imagen central - Paisaje o tecnología" class="central-img">
+            </div>
+
+            <!-- Datos del docente y alumno -->
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Profesor</div>
+                    <div class="detail-name">Felix Jonathan Gaspariano Reyes</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Alumna</div>
+                    <div class="detail-name">Maryne Valdez</div>
+                </div>
+            </div>
+
+            <!-- Línea decorativa -->
+            <div class="decor-line"></div>
+
+            <!-- MARQUESINA -->
+            <div class="marquee-wrapper">
+                <marquee behavior="scroll" direction="left" scrollamount="5" loop="infinite" class="custom-marquee">
+                    🚀 ¡Bienvenidos a la materia Tecnologías de la Información II! | Campus Texcoco | Profesor: F. Jonathan Gaspariano R. | Alumna: Maryne Valdez | Innovación, desarrollo y futuro digital 🌟
+                </marquee>
+            </div>
+            
+            <!-- Pie de página con fecha dinámica mediante JS -->
+            <div class="footer-date" id="dynamicDate"></div>
+        </div>
+    </main>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
